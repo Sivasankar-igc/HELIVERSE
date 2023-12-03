@@ -1,0 +1,88 @@
+.showTeam__wrapper{
+    width: 100%;
+    min-height: 100dvh;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(to bottom, rgb(0, 157, 255),80%, white);
+    padding: 5px 0;
+}
+.showTeam__wrapper .item__container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 2px 5px black;
+}
+.showTeam__wrapper .item__container #teamHead{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.showTeam__wrapper .item__container h4{
+    font-size: 15pt;
+    padding: 10px 100px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    color: white;
+}
+.showTeam__wrapper .item__container .item__wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.showTeam__wrapper .item__container .item__wrapper .item{
+    width: 200px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid aqua;
+    border-radius: 15px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    padding: 10px 25px;
+    background-color: black;
+    box-shadow: 0 0 5px 2px aqua;
+}
+.showTeam__wrapper .item__container .item__wrapper .item img{
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgb(37 119 221 / 82%);
+    box-shadow: 1px 2px 10px 2px rgb(32 42 54 / 82%);
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.showTeam__wrapper .item__container .item__wrapper .item p{
+    margin-top: 10px;
+    -webkit-text-stroke-width: .4pt;
+    letter-spacing: .3pt;
+    font-size: 10pt;
+}
+.showTeam__wrapper .item__container .item__wrapper .item p:nth-child(3){
+    font-size: .8em;
+}
+.showTeam__wrapper .item__container .item__wrapper .item button{
+    width: 150px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: blanchedalmond;
+    margin-top: 5px;
+    cursor: pointer;
+    transition:.4s all ease;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+.showTeam__wrapper .item__container .item__wrapper .item button:hover,
+.showTeam__wrapper .item__container .item__wrapper .item button:focus{
+    transform: scale(.92);
+}
+@media(max-width:347px){
+    .showTeam__wrapper .item__container h4{
+        padding: 10px 50px;
+        font-size: 12pt;
+    }
+}

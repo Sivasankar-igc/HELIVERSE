@@ -1,0 +1,108 @@
+.wrapper .nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.468);
+}
+
+.wrapper .nav #searchBar {
+    min-width: 700px;
+    max-width: 40%;
+    height: 40px;
+    border: 1.5px solid aqua;
+    border-radius: 25px;
+    padding-left: 15px;
+    outline: none;
+    font-size: 13pt;
+    -webkit-text-stroke: .6pt white;
+    letter-spacing: 1.2pt;
+    margin-left: 15px;
+    background-color: black;
+    color: white;
+    transition: .4s all ease;
+}
+
+.wrapper .nav #searchBar:hover,
+.wrapper .nav #searchBar:focus {
+    box-shadow: 0 0 10px .2px aqua;
+}
+
+.wrapper .nav .btn__container {
+    display: flex;
+    position: absolute;
+    right: 1%;
+}
+
+.wrapper .nav .btn__container button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 150px;
+    height: 40px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    -webkit-text-stroke: .4pt black;
+    font-size: 11pt;
+    letter-spacing: 1pt;
+    background-color: aqua;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .4s all ease;
+}
+
+.wrapper .nav .btn__container button:hover,
+.wrapper .nav .btn__container button:focus {
+    box-shadow: 0 0 5px 3px aqua;
+    transform: scale(.92);
+}
+
+@media (max-width:1065px) {
+    .wrapper .nav #searchBar {
+        min-width: 400px;
+        font-size: 10pt;
+    }
+}
+
+@media (max-width:767px) {
+    .wrapper .nav #searchBar {
+        min-width: 300px;
+    }
+
+    .wrapper .nav .btn__container button {
+        width: 110px;
+        font-size: 9pt;
+    }
+}
+@media (max-width:580px){
+    .wrapper .nav{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .wrapper .nav #searchBar {
+        min-width: 80%;
+        margin-left: 0;
+    }
+    .wrapper .nav .btn__container{
+        margin-top: 5px;
+        position:relative;
+        justify-content: center;
+    }
+    .wrapper .nav .btn__container button{
+        width: 140px;
+        margin-right: 20px;
+    }
+    .wrapper .nav .btn__container button:nth-child(2){
+        margin-right: 0;
+    }
+}
+@media (max-width:300px){
+    .wrapper .nav .btn__container{
+        flex-direction: column;
+    }
+    .wrapper .nav .btn__container button{
+        margin-right: 0;
+        margin-bottom: 3px;
+    }
+}
