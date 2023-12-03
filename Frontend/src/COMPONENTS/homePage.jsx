@@ -82,7 +82,6 @@ const HomePage = () => {
             if (window.confirm("Are You Sure")) {
                 axios.post("http://localhost:8000/createTeam", { teamName, team })
                     .then((res) => {
-                        console.log(res.data)
                         if (res.data == true) {
                             location.reload();
                         } else if (res.data == false) {
