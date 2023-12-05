@@ -1,0 +1,95 @@
+.wrapper .popup__box {
+    position: absolute;
+    top: 150px;
+    margin-left: 30%;
+    background-color: rgba(255, 253, 253, 0.415);
+    width: 600px;
+    height: 250px;
+    backdrop-filter: blur(15px);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.wrapper .popup__box input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 400px;
+    height: 40px;
+    border: 1.5px solid aqua;
+    border-radius: 25px;
+    padding-left: 15px;
+    outline: none;
+    font-size: 10pt;
+    -webkit-text-stroke: 1pt black;
+    letter-spacing: 1.2pt;
+    margin-left: 15px;
+    transition: .4s all ease;
+}
+.wrapper .popup__box button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 250px;
+    height: 40px;
+    border-radius: 25px;
+    letter-spacing: 1.2pt;
+    margin-top: 5px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+@media(max-width:1054px){
+    .wrapper .popup__box{
+        margin-left: 20%;
+    }
+}
+@media(max-width:847px){
+    .wrapper .popup__box{
+        margin-left: 10%;
+    }
+}
+@media(max-width:672px){
+    .wrapper .popup__box{
+        margin-left: 10%;
+        width: 500px;
+    }
+}
+@media(max-width:559px){
+    .wrapper .popup__box{
+        margin-left: 10%;
+        width: 400px;
+    }
+    .wrapper .popup__box input{
+        width: 300px;
+    }
+    .wrapper .popup__box button{
+        width: 200px;
+    }
+}
+@media(max-width:448px){
+    .wrapper .popup__box{
+        margin-left: 5%;
+        width: 300px;
+    }
+    .wrapper .popup__box input{
+        width: 250px;
+        font-size: 8pt;
+    }
+    .wrapper .popup__box button{
+        width: 100px;
+    }
+}
+@media(max-width:320px){
+    .wrapper .popup__box{
+        margin-left: 10%;
+        width: 250px;
+    }
+    .wrapper .popup__box input{
+        width: 200px;
+        font-size: 8pt;
+    }
+    .wrapper .popup__box button{
+        width: 100px;
+    }
+}
