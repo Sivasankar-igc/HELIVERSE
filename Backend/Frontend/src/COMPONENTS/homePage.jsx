@@ -22,27 +22,27 @@ const HomePage = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get("http://localhost:8000/userdata")
+        axios.get("/userdata")
             .then((res) => res.data != null ? setRecords(res.data) : window.alert("Something went wrong while getting the user data"))
             .catch((err) => console.error(err))
     }, [])
     useEffect(() => {
-        axios.post("http://localhost:8000/filteredItem", { gender, availability, domain })
+        axios.post("/filteredItem", { gender, availability, domain })
             .then((res) => res.data != null ? setRecords(res.data) : window.alert("Something went wrong"))
             .catch((err) => console.error(`error from filteredFunction =>>> ${err}`))
     }, [gender])
     useEffect(() => {
-        axios.post("http://localhost:8000/filteredItem", { gender, availability, domain })
+        axios.post("/filteredItem", { gender, availability, domain })
             .then((res) => res.data != null ? setRecords(res.data) : window.alert("Something went wrong"))
             .catch((err) => console.error(`error from filteredFunction =>>> ${err}`))
     }, [availability])
     useEffect(() => {
-        axios.post("http://localhost:8000/filteredItem", { gender, availability, domain })
+        axios.post("/filteredItem", { gender, availability, domain })
             .then((res) => res.data != null ? setRecords(res.data) : window.alert("Something went wrong"))
             .catch((err) => console.error(`error from filteredFunction =>>> ${err}`))
     }, [domain])
     useEffect(() => {
-        axios.post("http://localhost:8000/searchItem", { search })
+        axios.post("/searchItem", { search })
             .then((res) => res.data && setRecords(res.data))
             .catch((err) => console.error(`error at searching the user from the search tab =>>> ${err}`))
     }, [search])
@@ -80,7 +80,7 @@ const HomePage = () => {
 
         if (new RegExp("^[a-zA-Z][a-zA-Z]+[a-zA-Z]$").test(teamName)) {
             if (window.confirm("Are You Sure")) {
-                axios.post("http://localhost:8000/createTeam", { teamName, team })
+                axios.post("/createTeam", { teamName, team })
                     .then((res) => {
                         if (res.data == true) {
                             location.reload();

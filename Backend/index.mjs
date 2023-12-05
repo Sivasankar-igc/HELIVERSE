@@ -1,9 +1,14 @@
 import express from "express";
 import { user_collection, team_collection } from "./database.js";
 import cors from "cors";
+import { fileURLToPath } from "url";
+import {path, dirname} from "path";
+
+const PORT = process.env.PORT | 8000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const web = express();
-const PORT = process.env.PORT | 8000;
 web.use(express.urlencoded({ extended: false }));
 web.use(express.json());
 web.use(cors());
@@ -100,6 +105,15 @@ web.post("/removeUser", async (req, res) => {
         data.modifiedCount == 1 ? res.status(200).send(true) : res.status(200).send(false);
     } catch (error) {
         console.error(`error while removing an user`);
+    }
+})
+
+web.use(express.static(path.join(__dirname, "./Frontend/dist")))
+web.get("*", (req,res)=>{
+    try {
+        res.sendFile(path.join(__dirname, "./Frontend/dist/index.html"))        
+    } catch (error) {
+        console.error(`error while loading the frontend... =>>> ${error}`)
     }
 })
 

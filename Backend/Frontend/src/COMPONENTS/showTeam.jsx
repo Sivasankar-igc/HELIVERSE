@@ -6,12 +6,12 @@ const ShowTeam = () => {
     const [teamName, setTeamName] = useState(null);
 
     useEffect(() => {
-        axios.post("http://localhost:8000/showTeamName")
+        axios.post("/showTeamName")
             .then((res) => res.data != null ? setTeamName(res.data) : window.alert("something went wrong"))
             .catch((err) => console.error(`error at frontend while getting the team names =>>> ${err}`))
     }, [])
     const removeUser=(team, member)=>{
-        axios.post("http://localhost:8000/removeUser",{team,member})
+        axios.post("/removeUser",{team,member})
         .then((res)=>res.data == true?location.reload():window.alert("something went wrong"))
         .catch((err)=>console.error(`error occured at the frontend while removing an user`))
     }
