@@ -2,7 +2,8 @@ import express from "express";
 import { user_collection, team_collection } from "./database.js";
 import cors from "cors";
 import { fileURLToPath } from "url";
-import {path, dirname} from "path";
+import {dirname} from "path";
+import path from "path";
 
 const PORT = process.env.PORT | 8000;
 const __filename = fileURLToPath(import.meta.url);
